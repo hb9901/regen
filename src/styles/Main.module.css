@@ -1,0 +1,83 @@
+.intro{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  color: white;
+  height: 50vh;
+  background-color: #262A2D;
+}
+
+.box1{
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.box2{
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  background-color: black
+}
+.box3{
+  width: 5rem;
+  height: 3rem;
+  margin-top: 0.5rem;
+  background-color: white;
+}
+
+.text{
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+.text1{
+  font-size: 4.8rem;
+}
+
+.text2{
+  font-size: 1.5rem;
+}
+
+.fileuploader{
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputsite{
+  padding: 0.5rem;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  width: 36rem;
+  border-radius: 0.1rem;
+} 
+
+.inputtext{
+  font-size: 0.3rem;
+  color: black;
+}
+
+.sendtoserver{
+  margin-top: 1rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 10rem;
+  height: 2.3rem;
+  border-radius: 0.1rem;
+  background-color: rgb(91, 91, 252);
+}
+
+.link{
+  text-decoration: none;
+}

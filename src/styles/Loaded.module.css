@@ -1,0 +1,88 @@
+.loadedmain{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    padding-left: 1rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    overflow: auto;
+    border: 2px solid #a5a5a5;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    position: sticky;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+.homebutton{
+    margin-right: 2rem;
+    background-color: white;
+    color: rgb(91, 91, 252);
+    height: 3rem;
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.homebutton:hover{
+    cursor: pointer;
+}
+
+.downloadbutton{
+    margin-left: 2rem;
+    background-color: rgb(91, 91, 252);
+    color: white;
+    height: 3rem;
+    width: 10rem;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.downloadbutton:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 5rem;
+        padding-top: 2.5rem;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+    }
+}
