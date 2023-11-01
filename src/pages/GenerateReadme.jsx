@@ -12,7 +12,7 @@ function Readme(){
     //sse로 통신
     useEffect(() => {
         if(!isloaded){
-            const sseEvents = new EventSource(`http://34.64.244.68:5000/generate?gitUrl=${location.state.githublink}`)
+            const sseEvents = new EventSource(`${import.meta.env.SERVER_API_URL}${location.state.githublink}`)
             sseEvents.onopen = function() {
                 console.log("연결");
             }
