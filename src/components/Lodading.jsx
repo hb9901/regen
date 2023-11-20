@@ -6,7 +6,7 @@ import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {dark} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Loading(props){
-    //스크롤바 자동으로 내리기
+
     const scrollRef = useRef();
     useEffect(() => {
         scrollRef.current.scrollTop = scrollRef.current.scrollHeight;

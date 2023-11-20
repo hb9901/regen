@@ -55,19 +55,19 @@
 
 .inputsite{
   padding: 0.5rem;
-  margin-top: 2rem;
+  margin-top:30px;
   margin-right: 1rem;
   width: 36rem;
   border-radius: 0.1rem;
 } 
 
 .inputtext{
-  font-size: 0.3rem;
+  font-size: 10px;
   color: black;
 }
 
 .sendtoserver{
-  margin-top: 1rem;
+  margin-top:  15px;
   border: none;
   color: white;
   font-size: 1rem;
@@ -75,7 +75,7 @@
   width: 10rem;
   height: 2.3rem;
   border-radius: 0.1rem;
-  background-color: rgb(91, 91, 252);
+  background-color: rgb(0, 0, 165);
 }
 
 .link{
