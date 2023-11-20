@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import GenerateReadme from "./pages/GenerateReadme"
+import GenerateReadme from "./pages/generateReadme/GenerateReadme"
 const AppRouter = () => {
   return (
     <Routes>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
-import styles from "../styles/Loading.module.css";
+import React, { useEffect, useRef } from "react";
+import styles from "./Loading.module.css";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from "remark-gfm";
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'

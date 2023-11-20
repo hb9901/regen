@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "../styles/Loaded.module.css";
+import styles from "./Loaded.module.css";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from "remark-gfm";
 

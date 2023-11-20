@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { useLocation } from "react-router-dom";
-import Loaded from "../components/Loaded";
-import Loading from "../components/Lodading"
+import Loaded from "./loaded/Loaded";
+import Loading from "./loading/Lodading"
 
 function Readme(){
     const location = useLocation();
@@ -18,6 +18,7 @@ function Readme(){
             sseEvents.onmessage = function (stream) {
                 md += JSON.parse(stream.data);
                 setReadme(md);
+                setisLoaded(true); 
             }
             sseEvents.addEventListener('error', function(e) {
                 if (e.readyState == EventSource.CLOSED)
@@ -25,13 +26,13 @@ function Readme(){
                     setisLoaded(true); 
                 }
             }, false);
+
             return() => {
                 sseEvents.close();
-                setisLoaded(true); 
              }
         }
       }, [isloaded])
-      
+
     return (
         isloaded?
         <Loaded readme = {readme}/>:
