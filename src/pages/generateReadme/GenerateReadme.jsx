@@ -2,15 +2,16 @@ import React, { useState, useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import Loaded from "./loaded/Loaded";
 import Loading from "./loading/Lodading"
+import Error from "../error/Error";
 
 function Readme(){
     const location = useLocation();
     const [readme, setReadme] = useState(``);
-    const [isloaded, setisLoaded] = useState(false);
+    const [errorOccured, setErrorOccured] = useState(false);
+    const [loaded, setLoaded] = useState(false);
     let md = ``;
 
     useEffect(() => {
-        if(!isloaded){
             const sseEvents = new EventSource(`${process.env.SERVER_API_URL}${location.state.githublink}`)
             sseEvents.onopen = function() {
                 console.log("연결");
@@ -18,23 +19,27 @@ function Readme(){
             sseEvents.onmessage = function (stream) {
                 md += JSON.parse(stream.data);
                 setReadme(md);
-                setisLoaded(true); 
+  
+            }
+            sseEvents.onerror = function(){
+                setErrorOccured(true); 
             }
             sseEvents.addEventListener('error', function(e) {
-                if (e.readyState == EventSource.CLOSED)
-                    sseEvents.close(); {
-                    setisLoaded(true); 
+                if (e.readyState === EventSource.CLOSED){
+                    sseEvents.close();
+                    setLoaded(true); 
                 }
             }, false);
 
             return() => {
                 sseEvents.close();
              }
-        }
-      }, [isloaded])
+      }, [loaded])
 
     return (
-        isloaded?
+        errorOccured?
+        <Error/>:
+        loaded?
         <Loaded readme = {readme}/>:
         <Loading readme ={readme}/>
     )
