@@ -21,14 +21,13 @@ function Readme(){
                 setReadme(md);
   
             }
-            sseEvents.onerror = function(){
-                setErrorOccured(true); 
-            }
+
             sseEvents.addEventListener('error', function(e) {
                 if (e.readyState === EventSource.CLOSED){
                     sseEvents.close();
                     setLoaded(true); 
                 }
+                setErrorOccured(true); 
             }, false);
 
             return() => {
